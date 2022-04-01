@@ -41,25 +41,8 @@ const Home = () => {
                         >
                             Мы поможем вам найти партнеров
                         </motion.h1>
-                        <motion.p
-                            variants={fadeIn}
-                            custom={2}
-                            initial={`initial`}
-                            animate={`animate`}
-                            className={`mt-5 mb-4`}
-                        >
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consectetur, cum
-                            cumque error
-                            fugit maxime nemo nulla provident.
-                        </motion.p>
-                        <motion.button
-                            variants={fadeUp}
-                            custom={4}
-                            initial={`initial`}
-                            animate={`animate`}
-                            className={`btn btn-primary rounded-pill`}>
-                            Get Started
-                        </motion.button>
+                        
+                        
                     </div>
                 </div>
             </div>
