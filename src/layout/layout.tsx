@@ -35,7 +35,7 @@ const Layout: React.FC = ({children}) => {
                         </div>
                     </div>
                 </nav>
-                <div className={`main mt-3 pb-5`}>
+                <div className={`main mt-5 pb-5`}>
                     <div className={`container`}>
                         {
                             children
