@@ -38,6 +38,27 @@ const Layout: React.FC = ({children}) => {
                                         <a className={`nav-link`}>Профиль</a>
                                     </Link>
                                 </li>
+                                <li>
+                                    <Link href={`/contacts`}>
+                                        <a className={`nav-link`}>
+                                            Банк контактов
+                                        </a>
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href={`/news`}>
+                                        <a className={`nav-link`}>
+                                            Новости и мероприятия
+                                        </a>
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href={`/investments`}>
+                                        <a className={`nav-link`}>
+                                            Инвестиционные предложения
+                                        </a>
+                                    </Link>
+                                </li>
                             </ul>
                             <ul className={`d-flex align-items-center`}>
                                 <li>

@@ -4,6 +4,7 @@ import Layout from "../../layout";
 import {fadeIn, fadeUp, rightIn} from "../../motion";
 import {motion} from "framer-motion";
 import Link from 'next/link';
+import WoodCheckBox from "../../components/WoodCheckBox";
 
 
 type ICard = {
@@ -65,6 +66,118 @@ const Suppliers = () => {
     const router = useRouter();
     const [search, setSearch] = useState<string>('');
     const [isValid, setIsValid] = useState(false);
+
+    const [filters, setFilters] = useState([
+        {
+            name: 'ТехПроцесс',
+            items: [
+                {
+                    name: 'Категория 1',
+                    items: [
+                        {
+                            name: 'Подкатегория 1',
+                        },
+                        {
+                            name: 'Подкатегория 2',
+                        },
+                        {
+                            name: 'Подкатегория 3',
+                        }
+                    ]
+                },
+                {
+                    name: 'Категория 2',
+                },
+                {
+                    name: 'Категория 3',
+                    items: [
+                        {
+                            name: 'Подкатегория 1',
+                        },
+                        {
+                            name: 'Подкатегория 2',
+                        },
+                        {
+                            name: 'Подкатегория 3',
+                        }
+                    ]
+                },
+            ]
+        },
+        {
+            name: 'Услуга',
+            items: [
+                {
+                    name: 'Категория 1',
+                    items: [
+                        {
+                            name: 'Подкатегория 1',
+                        },
+                        {
+                            name: 'Подкатегория 2',
+                        },
+                        {
+                            name: 'Подкатегория 3',
+                        }
+                    ]
+                },
+                {
+                    name: 'Категория 2',
+                },
+                {
+                    name: 'Категория 3',
+                    items: [
+                        {
+                            name: 'Подкатегория 1',
+                        },
+                        {
+                            name: 'Подкатегория 2',
+                        },
+                        {
+                            name: 'Подкатегория 3',
+                        }
+                    ]
+                },
+            ]
+        },
+        {
+            name: 'Продукция',
+            items: [
+                {
+                    name: 'Категория 1',
+                    items: [
+                        {
+                            name: 'Подкатегория 1',
+                        },
+                        {
+                            name: 'Подкатегория 2',
+                        },
+                        {
+                            name: 'Подкатегория 3',
+                        }
+                    ]
+                },
+                {
+                    name: 'Категория 2',
+                },
+                {
+                    name: 'Категория 3',
+                    items: [
+                        {
+                            name: 'Подкатегория 1',
+                        },
+                        {
+                            name: 'Подкатегория 2',
+                        },
+                        {
+                            name: 'Подкатегория 3',
+                        }
+                    ]
+                },
+            ]
+        }
+    ]);
+
 
     const handleOnSubmit = (event: FormEvent) => {
         event.preventDefault();
@@ -158,40 +271,14 @@ const Suppliers = () => {
                     <div className={`row`}>
                         <div className={`col-3`}>
                             <div className="catalog-filter">
-                                <motion.select
-                                    variants={fadeUp}
-                                    custom={2}
-                                    initial={`initial`}
-                                    animate={`animate`}
-                                    className={`form-select mb-4`}>
-                                    <option selected>Open this select menu</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                </motion.select>
-                                <motion.select
-                                    variants={fadeUp}
-                                    custom={4}
-                                    initial={`initial`}
-                                    animate={`animate`}
-                                    className={`form-select mb-4`}>
-                                    <option selected>Open this select menu</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                </motion.select>
-                                <motion.select
-                                    variants={fadeUp}
-                                    custom={6}
-                                    initial={`initial`}
-                                    animate={`animate`}
-                                    className={`form-select mb-4`}>
-                                    <option selected>Open this select menu</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                </motion.select>
-                                <button className={`btn btn-success`}>
+                                <div className="checkbox-group">
+                                    {
+                                        filters.map((item, index) => (
+                                            <WoodCheckBox key={index} props={item} id={index}/>
+                                        ))
+                                    }
+                                </div>
+                                <button className={`btn mt-4 btn-success`}>
                                     Применить фильтры
                                 </button>
                             </div>

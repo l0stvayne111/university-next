@@ -2,6 +2,7 @@ import React, {ReactElement, useEffect, useState} from 'react';
 import Link from 'next/link'
 import {AnimatePresence, motion} from "framer-motion";
 import {fadeIn, fadeUp, rightIn} from "../../motion";
+import WoodCheckBox from "../../components/WoodCheckBox";
 
 const Profile = () => {
 
@@ -246,7 +247,11 @@ const Profile = () => {
                     <div className={`profile-menu p-4`}>
                         <div className={`profile-menu-title mb-5`}>
                             <div className={`logo`}>
-                                <img src="/logo.jpg" alt=""/>
+                                <Link href={`/home`}>
+                                    <a>
+                                        <img src="/logo.jpg" alt=""/>
+                                    </a>
+                                </Link>
                             </div>
                         </div>
                         <div className={`profile-menu-content`}>
@@ -262,6 +267,27 @@ const Profile = () => {
                                     <Link href={`/supplier`}>
                                         <a className={`profile-menu-link`}>
                                             Стать поставщиком
+                                        </a>
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href={`/contacts`}>
+                                        <a className={`profile-menu-link`}>
+                                            Банк контактов
+                                        </a>
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href={`/news`}>
+                                        <a className={`profile-menu-link`}>
+                                            Новости и мероприятия
+                                        </a>
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href={`/investments`}>
+                                        <a className={`profile-menu-link`}>
+                                            Инвестиционные предложения
                                         </a>
                                     </Link>
                                 </li>
@@ -332,7 +358,7 @@ const Profile = () => {
 
                                             {
                                                 filters.map((item, index) => (
-                                                    <CheckBox key={index} props={item} id={index}/>
+                                                    <WoodCheckBox key={index} props={item} id={index}/>
                                                 ))
                                             }
                                             <button className={`btn mt-4 btn-success rounded-pill`}>
@@ -452,50 +478,7 @@ const Profile = () => {
 };
 
 
-const CheckBox: React.FC<{ props: { name: string, items: Array<any> }, id: number }> = ({props, id}) => {
-    const hasChildren = props.items && props.items.length;
 
-    const [check, setCheck] = useState(false)
-
-    return (
-        <>
-            <AnimatePresence exitBeforeEnter>
-                <motion.div
-                    variants={rightIn}
-                    custom={id}
-                    initial={`initial`}
-                    animate={`animate`}
-                    className={`x`}>
-                    <label>
-                        <input type="checkbox" onChange={() => setCheck(!check)}/>
-                        <span className="checkbox">
-                        <span className="check"/>
-                    </span>
-                        {props.name}
-                    </label>
-                    <AnimatePresence exitBeforeEnter>
-                        {
-                            check && (
-                                <motion.div
-                                    variants={rightIn}
-                                    custom={id}
-                                    initial={`initial`}
-                                    animate={`animate`}
-                                    className={`y`}>
-                                    {
-                                        hasChildren && props.items.map((item, index) => (
-                                            <CheckBox key={index} props={item} id={index}/>
-                                        ))
-                                    }
-                                </motion.div>
-                            )
-                        }
-                    </AnimatePresence>
-                </motion.div>
-            </AnimatePresence>
-        </>
-    )
-}
 
 
 export default Profile;

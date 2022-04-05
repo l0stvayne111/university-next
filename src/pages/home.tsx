@@ -27,7 +27,7 @@ const Home = () => {
 
     return (
         <>
-            <div className={`container`}>
+            <div className={`container mt-3`}>
                 <div className={`header`}>
                     <div className={`row justify-content-center`}>
                         <div className="col-8 d-flex flex-column align-items-center">
