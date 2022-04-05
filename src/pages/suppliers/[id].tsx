@@ -88,138 +88,139 @@ const Suppliers = () => {
 
     return (
         <>
-            <motion.div
-                variants={fadeIn}
-                custom={5}
-                initial={`initial`}
-                animate={`animate`}
-                className={`search mt-4`}>
-                <form onSubmit={handleOnSubmit}>
-                    <div className={`row gx-2 align-items-center`}>
-                        <div className={`col-5`}>
-                            <input
-                                type="text"
-                                value={search}
-                                onChange={event => setSearch(event.target.value)}
-                                className={`search-input`}
-                                placeholder={`Поиск`}
-                            />
+            <div className={`container`}>
+                <motion.div
+                    variants={fadeIn}
+                    custom={5}
+                    initial={`initial`}
+                    animate={`animate`}
+                    className={`search mt-4`}>
+                    <form onSubmit={handleOnSubmit}>
+                        <div className={`row gx-2 align-items-center`}>
+                            <div className={`col-5`}>
+                                <input
+                                    type="text"
+                                    value={search}
+                                    onChange={event => setSearch(event.target.value)}
+                                    className={`search-input`}
+                                    placeholder={`Поиск`}
+                                />
+                            </div>
+                            <div className={`col-auto`}>
+                                <button
+                                    disabled={!isValid}
+                                    className={`btn btn-primary rounded-pill`}
+                                    type={`submit`}
+                                >
+                                    Найти поставщика
+                                </button>
+                            </div>
                         </div>
-                        <div className={`col-auto`}>
-                            <button
-                                disabled={!isValid}
-                                className={`btn btn-primary rounded-pill`}
-                                type={`submit`}
-                            >
-                                Найти поставщика
-                            </button>
+                    </form>
+                </motion.div>
+
+                <div className={'suppliers-search mt-4'}>
+                    <div className={'suppliers-search-header'}>
+                        23 поставщика на «{search}»
+                    </div>
+                    <div className={`suppliers-search-tabs d-flex align-items-center mt-3`}>
+                        <motion.button
+                            variants={rightIn}
+                            custom={1}
+                            initial={`initial`}
+                            animate={`animate`}
+                            type={`button`}
+                            className={`btn btn-outline-info btn-sm rounded-pill`}>
+                            ТехПроцесс
+                        </motion.button>
+                        <motion.button
+                            variants={rightIn}
+                            custom={3}
+                            initial={`initial`}
+                            animate={`animate`}
+                            type={`button`}
+                            className={`btn btn-outline-info btn-sm rounded-pill`}>
+                            Услуга
+                        </motion.button>
+                        <motion.button
+                            variants={rightIn}
+                            custom={5}
+                            initial={`initial`}
+                            animate={`animate`}
+                            type={`button`}
+                            className={`btn btn-outline-info btn-sm rounded-pill`}>
+                            Продукция
+                        </motion.button>
+                    </div>
+                </div>
+
+                <div className={`catalog mt-4`}>
+                    <div className={`row`}>
+                        <div className={`col-3`}>
+                            <div className="catalog-filter">
+                                <motion.select
+                                    variants={fadeUp}
+                                    custom={2}
+                                    initial={`initial`}
+                                    animate={`animate`}
+                                    className={`form-select mb-4`}>
+                                    <option selected>Open this select menu</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </motion.select>
+                                <motion.select
+                                    variants={fadeUp}
+                                    custom={4}
+                                    initial={`initial`}
+                                    animate={`animate`}
+                                    className={`form-select mb-4`}>
+                                    <option selected>Open this select menu</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </motion.select>
+                                <motion.select
+                                    variants={fadeUp}
+                                    custom={6}
+                                    initial={`initial`}
+                                    animate={`animate`}
+                                    className={`form-select mb-4`}>
+                                    <option selected>Open this select menu</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </motion.select>
+                                <button className={`btn btn-success`}>
+                                    Применить фильтры
+                                </button>
+                            </div>
+                        </div>
+                        <div className={`col-9`}>
+                            <div className={`catalog-items`}>
+                                {
+                                    store.map((item: ICard, index: number) => (
+                                        <motion.div
+                                            variants={rightIn}
+                                            custom={index * 2}
+                                            initial={`initial`}
+                                            animate={`animate`}
+                                            key={item.id}>
+                                            <Card
+                                                id={item.id}
+                                                image={item.image}
+                                                title={item.title}
+                                                description={item.description}
+                                                path={item.path}
+                                                ul={item.ul}/>
+                                        </motion.div>
+                                    ))
+                                }
+                            </div>
                         </div>
                     </div>
-                </form>
-            </motion.div>
-
-            <div className={'suppliers-search mt-4'}>
-                <div className={'suppliers-search-header'}>
-                    23 поставщика на «{search}»
-                </div>
-                <div className={`suppliers-search-tabs d-flex align-items-center mt-3`}>
-                    <motion.button
-                        variants={rightIn}
-                        custom={1}
-                        initial={`initial`}
-                        animate={`animate`}
-                        type={`button`}
-                        className={`btn btn-outline-info btn-sm rounded-pill`}>
-                        ТехПроцесс
-                    </motion.button>
-                    <motion.button
-                        variants={rightIn}
-                        custom={3}
-                        initial={`initial`}
-                        animate={`animate`}
-                        type={`button`}
-                        className={`btn btn-outline-info btn-sm rounded-pill`}>
-                        Услуга
-                    </motion.button>
-                    <motion.button
-                        variants={rightIn}
-                        custom={5}
-                        initial={`initial`}
-                        animate={`animate`}
-                        type={`button`}
-                        className={`btn btn-outline-info btn-sm rounded-pill`}>
-                        Продукция
-                    </motion.button>
                 </div>
             </div>
-
-            <div className={`catalog mt-4`}>
-                <div className={`row`}>
-                    <div className={`col-3`}>
-                        <div className="catalog-filter">
-                            <motion.select
-                                variants={fadeUp}
-                                custom={2}
-                                initial={`initial`}
-                                animate={`animate`}
-                                className={`form-select mb-4`}>
-                                <option selected>Open this select menu</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </motion.select>
-                            <motion.select
-                                variants={fadeUp}
-                                custom={4}
-                                initial={`initial`}
-                                animate={`animate`}
-                                className={`form-select mb-4`}>
-                                <option selected>Open this select menu</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </motion.select>
-                            <motion.select
-                                variants={fadeUp}
-                                custom={6}
-                                initial={`initial`}
-                                animate={`animate`}
-                                className={`form-select mb-4`}>
-                                <option selected>Open this select menu</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </motion.select>
-                            <button className={`btn btn-success`}>
-                                Применить фильтры
-                            </button>
-                        </div>
-                    </div>
-                    <div className={`col-9`}>
-                        <div className={`catalog-items`}>
-                            {
-                                store.map((item: ICard, index: number) => (
-                                    <motion.div
-                                        variants={rightIn}
-                                        custom={index * 2}
-                                        initial={`initial`}
-                                        animate={`animate`}
-                                        key={item.id}>
-                                        <Card
-                                            id={item.id}
-                                            image={item.image}
-                                            title={item.title}
-                                            description={item.description}
-                                            path={item.path}
-                                            ul={item.ul}/>
-                                    </motion.div>
-                                ))
-                            }
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         </>
     );
 };

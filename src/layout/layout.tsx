@@ -1,12 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Link from 'next/link'
-
+import {AnimatePresence, motion} from "framer-motion";
+import {fadeIn, fadeUp, rightIn} from "../motion"
 
 const Layout: React.FC = ({children}) => {
+
+    const [isActive, setIsActive] = useState(false);
+    const [value, setValue] = useState('Брянск')
+
+    const handleClick = (event:any) => {
+      setIsActive(false);
+      setValue(event.target.textContent);
+    }
+
     return (
         <>
             <div className={`section d-flex flex-column`}>
-                <nav className={`nav`}>
+                <div className={`nav`}>
                     <div className={`container-fluid`}>
                         <div className={`d-flex align-items-center justify-content-between`}>
                             <a href="#" className={`logo`}>
@@ -23,9 +33,43 @@ const Layout: React.FC = ({children}) => {
                                         <a className={`nav-link`}>Стать поставщиком</a>
                                     </Link>
                                 </li>
+                                <li>
+                                    <Link href={`/profile`}>
+                                        <a className={`nav-link`}>Профиль</a>
+                                    </Link>
+                                </li>
                             </ul>
                             <ul className={`d-flex align-items-center`}>
-                                <li><a className={`nav-link`} href="#">Брянск</a></li>
+                                <li>
+                                    <div className={`dropdown`}>
+                                        <div
+                                            onClick={() => setIsActive(!isActive)}
+                                            className={`dropdown-btn`}>{value}</div>
+                                        {
+                                            isActive && (
+                                                <motion.div
+                                                    variants={fadeUp}
+                                                    custom={2}
+                                                    initial={`initial`}
+                                                    animate={`animate`}
+                                                    className={`dropdown-content`}>
+                                                    <div
+                                                        onClick={handleClick}
+                                                        className={`dropdown-item`}>
+                                                        Брянск
+                                                    </div>
+                                                    <div onClick={handleClick}
+                                                         className={`dropdown-item`}>
+                                                        Смоленск
+                                                    </div>
+                                                    <div onClick={handleClick} className={`dropdown-item`}>
+                                                        Москва
+                                                    </div>
+                                                </motion.div>
+                                            )
+                                        }
+                                    </div>
+                                </li>
                                 <li>
                                     <button type={`button`} className={`btn btn-outline-info btn-sm rounded-pill`}>
                                         Войти
@@ -34,13 +78,13 @@ const Layout: React.FC = ({children}) => {
                             </ul>
                         </div>
                     </div>
-                </nav>
-                <div className={`main mt-5 pb-5`}>
-                    <div className={`container`}>
-                        {
-                            children
-                        }
-                    </div>
+                </div>
+                <div className={`main pb-5`}>
+                    {
+                        children
+                    }
+
+
                 </div>
                 <footer className={`footer py-4`}>
                     <div className={`container`}>

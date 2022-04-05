@@ -22,196 +22,257 @@ const Product = () => {
 
     return (
         <>
-            <div className={`product card`}>
-                <div className={`row`}>
-                    <div className={`product-img`}>
-                        <img src={`${state.image}`} alt=""/>
-                    </div>
-                    <div className={`col`}>
-                        <div className={`info-block`}>
-                            <div className="title mb-2">
-                                {state.title}
+            <div className={`container`}>
+                <div className={`product card`}>
+                    <div className={`row`}>
+                        <div className={`product-img`}>
+                            <img src={`${state.image}`} alt=""/>
+                        </div>
+                        <div className={`col`}>
+                            <div className={`info-block`}>
+                                <div className="title mb-2">
+                                    {state.title}
+                                </div>
+                                <div className={`subtitle mb-5`}>
+                                    ООО «Пронская Металлобаза»
+                                </div>
+                                <ul className={`my-3`}>
+                                    {
+                                        state.ul.map((i: string, index: number) => <li key={index}>{i}</li>)
+                                    }
+                                </ul>
+                                <Link href={``}>
+                                    <a target={`_blank`} className={`btn btn-primary`}>
+                                        Перейти на сайт поставщика
+                                    </a>
+                                </Link>
                             </div>
-                            <div className={`subtitle mb-5`}>
-                                ООО «Пронская Металлобаза»
+                        </div>
+                    </div>
+                </div>
+                <div className={`product-tabs mt-3 mb-2`}>
+                    <div className={`row gx-2`}>
+                        <div className={`col-auto`}>
+                            <div
+                                onClick={() => setTab(1)}
+                                className={`card item ${tab === 1 && 'active'}`}>
+                                О товаре
                             </div>
-                            <ul className={`my-3`}>
-                                {
-                                    state.ul.map((i: string, index: number) => <li key={index}>{i}</li>)
-                                }
-                            </ul>
-                            <Link href={``}>
-                                <a target={`_blank`} className={`btn btn-primary`}>
-                                    Перейти на сайт поставщика
-                                </a>
-                            </Link>
+                        </div>
+                        <div className={`col-auto`}>
+                            <div
+                                onClick={() => setTab(2)}
+                                className={`card item ${tab === 2 && 'active'}`}>
+                                О компании
+                            </div>
+                        </div>
+                        <div className={`col-auto`}>
+                            <div
+                                onClick={() => setTab(3)}
+                                className={`card item ${tab === 3 && 'active'}`}>
+                                Доставка и оплата
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className={`product-tabs mt-3 mb-2`}>
-                <div className={`row gx-2`}>
-                    <div className={`col-auto`}>
-                        <div
-                            onClick={() => setTab(1)}
-                            className={`card item ${tab === 1 && 'active'}`}>
-                            О товаре
-                        </div>
-                    </div>
-                    <div className={`col-auto`}>
-                        <div
-                            onClick={() => setTab(2)}
-                            className={`card item ${tab === 2 && 'active'}`}>
-                            О компании
-                        </div>
-                    </div>
-                    <div className={`col-auto`}>
-                        <div
-                            onClick={() => setTab(3)}
-                            className={`card item ${tab === 3 && 'active'}`}>
-                            Доставка и оплата
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <div className={`product-content`}>
-                <div className={`row`}>
-                    {
-                        tab === 1 && (
-                            <motion.div
-                                variants={rightIn}
-                                custom={1}
-                                initial={`initial`}
-                                animate={`animate`}
-                                className={`col`}>
-                                <div className={`card`}>
-                                    Описание 1
-                                    <br/><br/>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at dicta dolor explicabo
-                                    ipsum libero nesciunt nihil, quam quasi quibusdam ratione repellat rerum sint, soluta
-                                    voluptatibus! Ad aliquam, distinctio ducimus eum facere laborum quaerat voluptate. Delectus
-                                    eius facilis in magnam nulla repudiandae? Corporis dolore, dolores eum laboriosam nemo
-                                    possimus praesentium!
-                                    <br/><br/>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at dicta dolor explicabo
-                                    ipsum libero nesciunt nihil, quam quasi quibusdam ratione repellat rerum sint, soluta
-                                    voluptatibus! Ad aliquam, distinctio ducimus eum facere laborum quaerat voluptate. Delectus
-                                    eius facilis in magnam nulla repudiandae? Corporis dolore, dolores eum laboriosam nemo
-                                    possimus praesentium!
-                                    <br/><br/>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at dicta dolor explicabo
-                                    ipsum libero nesciunt nihil, quam quasi quibusdam ratione repellat rerum sint, soluta
-                                    voluptatibus! Ad aliquam, distinctio ducimus eum facere laborum quaerat voluptate. Delectus
-                                    eius facilis in magnam nulla repudiandae? Corporis dolore, dolores eum laboriosam nemo
-                                    possimus praesentium!
-                                    <br/><br/>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at dicta dolor explicabo
-                                    ipsum libero nesciunt nihil, quam quasi quibusdam ratione repellat rerum sint, soluta
-                                    voluptatibus! Ad aliquam, distinctio ducimus eum facere laborum quaerat voluptate. Delectus
-                                    eius facilis in magnam nulla repudiandae? Corporis dolore, dolores eum laboriosam nemo
-                                    possimus praesentium!
-                                    <br/><br/>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at dicta dolor explicabo
-                                    ipsum libero nesciunt nihil, quam quasi quibusdam ratione repellat rerum sint, soluta
-                                    voluptatibus! Ad aliquam, distinctio ducimus eum facere laborum quaerat voluptate. Delectus
-                                    eius facilis in magnam nulla repudiandae? Corporis dolore, dolores eum laboriosam nemo
-                                    possimus praesentium!
-                                </div>
-                            </motion.div>
-                        )
-                    }
-                    {
-                        tab === 2 && (
-                            <motion.div
-                                variants={rightIn}
-                                custom={1}
-                                initial={`initial`}
-                                animate={`animate`}
-                                className={`col`}>
-                                <div className={`card`}>
-                                    Описание 2
-                                    <br/><br/>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at dicta dolor explicabo
-                                    ipsum libero nesciunt nihil, quam quasi quibusdam ratione repellat rerum sint, soluta
-                                    voluptatibus! Ad aliquam, distinctio ducimus eum facere laborum quaerat voluptate. Delectus
-                                    eius facilis in magnam nulla repudiandae? Corporis dolore, dolores eum laboriosam nemo
-                                    possimus praesentium!
-                                    <br/><br/>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at dicta dolor explicabo
-                                    ipsum libero nesciunt nihil, quam quasi quibusdam ratione repellat rerum sint, soluta
-                                    voluptatibus! Ad aliquam, distinctio ducimus eum facere laborum quaerat voluptate. Delectus
-                                    eius facilis in magnam nulla repudiandae? Corporis dolore, dolores eum laboriosam nemo
-                                    possimus praesentium!
-                                    <br/><br/>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at dicta dolor explicabo
-                                    ipsum libero nesciunt nihil, quam quasi quibusdam ratione repellat rerum sint, soluta
-                                    voluptatibus! Ad aliquam, distinctio ducimus eum facere laborum quaerat voluptate. Delectus
-                                    eius facilis in magnam nulla repudiandae? Corporis dolore, dolores eum laboriosam nemo
-                                    possimus praesentium!
-                                    <br/><br/>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at dicta dolor explicabo
-                                    ipsum libero nesciunt nihil, quam quasi quibusdam ratione repellat rerum sint, soluta
-                                    voluptatibus! Ad aliquam, distinctio ducimus eum facere laborum quaerat voluptate. Delectus
-                                    eius facilis in magnam nulla repudiandae? Corporis dolore, dolores eum laboriosam nemo
-                                    possimus praesentium!
-                                    <br/><br/>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at dicta dolor explicabo
-                                    ipsum libero nesciunt nihil, quam quasi quibusdam ratione repellat rerum sint, soluta
-                                    voluptatibus! Ad aliquam, distinctio ducimus eum facere laborum quaerat voluptate. Delectus
-                                    eius facilis in magnam nulla repudiandae? Corporis dolore, dolores eum laboriosam nemo
-                                    possimus praesentium!
-                                </div>
-                            </motion.div>
-                        )
-                    }
-                    {
-                        tab === 3 && (
-                            <motion.div
-                                variants={rightIn}
-                                custom={1}
-                                initial={`initial`}
-                                animate={`animate`}
-                                className={`col`}>
-                                <div className={`card`}>
-                                    Описание 3
-                                    <br/><br/>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at dicta dolor explicabo
-                                    ipsum libero nesciunt nihil, quam quasi quibusdam ratione repellat rerum sint, soluta
-                                    voluptatibus! Ad aliquam, distinctio ducimus eum facere laborum quaerat voluptate. Delectus
-                                    eius facilis in magnam nulla repudiandae? Corporis dolore, dolores eum laboriosam nemo
-                                    possimus praesentium!
-                                    <br/><br/>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at dicta dolor explicabo
-                                    ipsum libero nesciunt nihil, quam quasi quibusdam ratione repellat rerum sint, soluta
-                                    voluptatibus! Ad aliquam, distinctio ducimus eum facere laborum quaerat voluptate. Delectus
-                                    eius facilis in magnam nulla repudiandae? Corporis dolore, dolores eum laboriosam nemo
-                                    possimus praesentium!
-                                    <br/><br/>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at dicta dolor explicabo
-                                    ipsum libero nesciunt nihil, quam quasi quibusdam ratione repellat rerum sint, soluta
-                                    voluptatibus! Ad aliquam, distinctio ducimus eum facere laborum quaerat voluptate. Delectus
-                                    eius facilis in magnam nulla repudiandae? Corporis dolore, dolores eum laboriosam nemo
-                                    possimus praesentium!
-                                    <br/><br/>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at dicta dolor explicabo
-                                    ipsum libero nesciunt nihil, quam quasi quibusdam ratione repellat rerum sint, soluta
-                                    voluptatibus! Ad aliquam, distinctio ducimus eum facere laborum quaerat voluptate. Delectus
-                                    eius facilis in magnam nulla repudiandae? Corporis dolore, dolores eum laboriosam nemo
-                                    possimus praesentium!
-                                    <br/><br/>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at dicta dolor explicabo
-                                    ipsum libero nesciunt nihil, quam quasi quibusdam ratione repellat rerum sint, soluta
-                                    voluptatibus! Ad aliquam, distinctio ducimus eum facere laborum quaerat voluptate. Delectus
-                                    eius facilis in magnam nulla repudiandae? Corporis dolore, dolores eum laboriosam nemo
-                                    possimus praesentium!
-                                </div>
-                            </motion.div>
-                        )
-                    }
+                <div className={`product-content`}>
+                    <div className={`row`}>
+                        {
+                            tab === 1 && (
+                                <motion.div
+                                    variants={rightIn}
+                                    custom={1}
+                                    initial={`initial`}
+                                    animate={`animate`}
+                                    className={`col`}>
+                                    <div className={`card`}>
+                                        Описание 1
+                                        <br/><br/>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at dicta dolor
+                                        explicabo
+                                        ipsum libero nesciunt nihil, quam quasi quibusdam ratione repellat rerum sint,
+                                        soluta
+                                        voluptatibus! Ad aliquam, distinctio ducimus eum facere laborum quaerat voluptate.
+                                        Delectus
+                                        eius facilis in magnam nulla repudiandae? Corporis dolore, dolores eum laboriosam
+                                        nemo
+                                        possimus praesentium!
+                                        <br/><br/>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at dicta dolor
+                                        explicabo
+                                        ipsum libero nesciunt nihil, quam quasi quibusdam ratione repellat rerum sint,
+                                        soluta
+                                        voluptatibus! Ad aliquam, distinctio ducimus eum facere laborum quaerat voluptate.
+                                        Delectus
+                                        eius facilis in magnam nulla repudiandae? Corporis dolore, dolores eum laboriosam
+                                        nemo
+                                        possimus praesentium!
+                                        <br/><br/>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at dicta dolor
+                                        explicabo
+                                        ipsum libero nesciunt nihil, quam quasi quibusdam ratione repellat rerum sint,
+                                        soluta
+                                        voluptatibus! Ad aliquam, distinctio ducimus eum facere laborum quaerat voluptate.
+                                        Delectus
+                                        eius facilis in magnam nulla repudiandae? Corporis dolore, dolores eum laboriosam
+                                        nemo
+                                        possimus praesentium!
+                                        <br/><br/>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at dicta dolor
+                                        explicabo
+                                        ipsum libero nesciunt nihil, quam quasi quibusdam ratione repellat rerum sint,
+                                        soluta
+                                        voluptatibus! Ad aliquam, distinctio ducimus eum facere laborum quaerat voluptate.
+                                        Delectus
+                                        eius facilis in magnam nulla repudiandae? Corporis dolore, dolores eum laboriosam
+                                        nemo
+                                        possimus praesentium!
+                                        <br/><br/>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at dicta dolor
+                                        explicabo
+                                        ipsum libero nesciunt nihil, quam quasi quibusdam ratione repellat rerum sint,
+                                        soluta
+                                        voluptatibus! Ad aliquam, distinctio ducimus eum facere laborum quaerat voluptate.
+                                        Delectus
+                                        eius facilis in magnam nulla repudiandae? Corporis dolore, dolores eum laboriosam
+                                        nemo
+                                        possimus praesentium!
+                                    </div>
+                                </motion.div>
+                            )
+                        }
+                        {
+                            tab === 2 && (
+                                <motion.div
+                                    variants={rightIn}
+                                    custom={1}
+                                    initial={`initial`}
+                                    animate={`animate`}
+                                    className={`col`}>
+                                    <div className={`card`}>
+                                        Описание 2
+                                        <br/><br/>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at dicta dolor
+                                        explicabo
+                                        ipsum libero nesciunt nihil, quam quasi quibusdam ratione repellat rerum sint,
+                                        soluta
+                                        voluptatibus! Ad aliquam, distinctio ducimus eum facere laborum quaerat voluptate.
+                                        Delectus
+                                        eius facilis in magnam nulla repudiandae? Corporis dolore, dolores eum laboriosam
+                                        nemo
+                                        possimus praesentium!
+                                        <br/><br/>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at dicta dolor
+                                        explicabo
+                                        ipsum libero nesciunt nihil, quam quasi quibusdam ratione repellat rerum sint,
+                                        soluta
+                                        voluptatibus! Ad aliquam, distinctio ducimus eum facere laborum quaerat voluptate.
+                                        Delectus
+                                        eius facilis in magnam nulla repudiandae? Corporis dolore, dolores eum laboriosam
+                                        nemo
+                                        possimus praesentium!
+                                        <br/><br/>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at dicta dolor
+                                        explicabo
+                                        ipsum libero nesciunt nihil, quam quasi quibusdam ratione repellat rerum sint,
+                                        soluta
+                                        voluptatibus! Ad aliquam, distinctio ducimus eum facere laborum quaerat voluptate.
+                                        Delectus
+                                        eius facilis in magnam nulla repudiandae? Corporis dolore, dolores eum laboriosam
+                                        nemo
+                                        possimus praesentium!
+                                        <br/><br/>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at dicta dolor
+                                        explicabo
+                                        ipsum libero nesciunt nihil, quam quasi quibusdam ratione repellat rerum sint,
+                                        soluta
+                                        voluptatibus! Ad aliquam, distinctio ducimus eum facere laborum quaerat voluptate.
+                                        Delectus
+                                        eius facilis in magnam nulla repudiandae? Corporis dolore, dolores eum laboriosam
+                                        nemo
+                                        possimus praesentium!
+                                        <br/><br/>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at dicta dolor
+                                        explicabo
+                                        ipsum libero nesciunt nihil, quam quasi quibusdam ratione repellat rerum sint,
+                                        soluta
+                                        voluptatibus! Ad aliquam, distinctio ducimus eum facere laborum quaerat voluptate.
+                                        Delectus
+                                        eius facilis in magnam nulla repudiandae? Corporis dolore, dolores eum laboriosam
+                                        nemo
+                                        possimus praesentium!
+                                    </div>
+                                </motion.div>
+                            )
+                        }
+                        {
+                            tab === 3 && (
+                                <motion.div
+                                    variants={rightIn}
+                                    custom={1}
+                                    initial={`initial`}
+                                    animate={`animate`}
+                                    className={`col`}>
+                                    <div className={`card`}>
+                                        Описание 3
+                                        <br/><br/>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at dicta dolor
+                                        explicabo
+                                        ipsum libero nesciunt nihil, quam quasi quibusdam ratione repellat rerum sint,
+                                        soluta
+                                        voluptatibus! Ad aliquam, distinctio ducimus eum facere laborum quaerat voluptate.
+                                        Delectus
+                                        eius facilis in magnam nulla repudiandae? Corporis dolore, dolores eum laboriosam
+                                        nemo
+                                        possimus praesentium!
+                                        <br/><br/>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at dicta dolor
+                                        explicabo
+                                        ipsum libero nesciunt nihil, quam quasi quibusdam ratione repellat rerum sint,
+                                        soluta
+                                        voluptatibus! Ad aliquam, distinctio ducimus eum facere laborum quaerat voluptate.
+                                        Delectus
+                                        eius facilis in magnam nulla repudiandae? Corporis dolore, dolores eum laboriosam
+                                        nemo
+                                        possimus praesentium!
+                                        <br/><br/>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at dicta dolor
+                                        explicabo
+                                        ipsum libero nesciunt nihil, quam quasi quibusdam ratione repellat rerum sint,
+                                        soluta
+                                        voluptatibus! Ad aliquam, distinctio ducimus eum facere laborum quaerat voluptate.
+                                        Delectus
+                                        eius facilis in magnam nulla repudiandae? Corporis dolore, dolores eum laboriosam
+                                        nemo
+                                        possimus praesentium!
+                                        <br/><br/>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at dicta dolor
+                                        explicabo
+                                        ipsum libero nesciunt nihil, quam quasi quibusdam ratione repellat rerum sint,
+                                        soluta
+                                        voluptatibus! Ad aliquam, distinctio ducimus eum facere laborum quaerat voluptate.
+                                        Delectus
+                                        eius facilis in magnam nulla repudiandae? Corporis dolore, dolores eum laboriosam
+                                        nemo
+                                        possimus praesentium!
+                                        <br/><br/>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at dicta dolor
+                                        explicabo
+                                        ipsum libero nesciunt nihil, quam quasi quibusdam ratione repellat rerum sint,
+                                        soluta
+                                        voluptatibus! Ad aliquam, distinctio ducimus eum facere laborum quaerat voluptate.
+                                        Delectus
+                                        eius facilis in magnam nulla repudiandae? Corporis dolore, dolores eum laboriosam
+                                        nemo
+                                        possimus praesentium!
+                                    </div>
+                                </motion.div>
+                            )
+                        }
+                    </div>
                 </div>
             </div>
-
 
         </>
     );
