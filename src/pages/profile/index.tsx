@@ -384,7 +384,9 @@ const Profile = () => {
                                                                     <img src={`${item.image}`} alt=""/>
                                                                 </div>
                                                                 <span>
-                                                                {item.name}
+                                                                    <Link href={`/product/${i}`}>
+                                                                        <a>{item.name}</a>
+                                                                    </Link>
                                                             </span>
                                                             </div>
                                                         </td>
