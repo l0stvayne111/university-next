@@ -87,10 +87,10 @@ const Home = () => {
                                             initial={`initial`}
                                             animate={`animate`}
                                             className={`form-select`}>
-                                            <option selected>Open this select menu</option>
-                                            <option value="1">One</option>
-                                            <option value="2">Two</option>
-                                            <option value="3">Three</option>
+                                            <option selected>Тип</option>
+                                            <option value="1">Механическая обработка</option>
+                                            <option value="2">Литье</option>
+                                            <option value="3">Нанесение гальванических покрытий</option>
                                         </motion.select>
                                     </div>
                                     <div className="col-4">
@@ -100,10 +100,10 @@ const Home = () => {
                                             initial={`initial`}
                                             animate={`animate`}
                                             className={`form-select`}>
-                                            <option selected>Open this select menu</option>
-                                            <option value="1">One</option>
-                                            <option value="2">Two</option>
-                                            <option value="3">Three</option>
+                                            <option selected>Виды работ</option>
+                                            <option value="1">Фрезерные работы</option>
+                                            <option value="2">Токарные работы</option>
+                                            <option value="3">Шлифование</option>
                                         </motion.select>
                                     </div>
                                     <div className="col-4">
@@ -113,10 +113,10 @@ const Home = () => {
                                             initial={`initial`}
                                             animate={`animate`}
                                             className={`form-select`}>
-                                            <option selected>Open this select menu</option>
-                                            <option value="1">One</option>
-                                            <option value="2">Two</option>
-                                            <option value="3">Three</option>
+                                            <option selected>Материал</option>
+                                            <option value="1">Сталь</option>
+                                            <option value="2">Чугун</option>
+                                            <option value="3">Алюминий</option>
                                         </motion.select>
                                     </div>
                                 </div>
