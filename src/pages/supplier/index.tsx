@@ -17,8 +17,7 @@ const Supplier = () => {
                                 initial={`initial`}
                                 animate={`animate`}
                             >
-                                Хотите стать поставщиком?
-                                Разместите свою заявку здесь
+                                У вас есть производственные предложения?
                             </motion.h1>
                             <motion.p
                                 variants={fadeIn}
@@ -27,26 +26,20 @@ const Supplier = () => {
                                 animate={`animate`}
                                 className={`mt-5 mb-4`}
                             >
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consectetur, cum
-                                cumque error
-                                fugit maxime nemo nulla provident.
+                                Зарегистрируйтесь или водите в Профиль чтобы добавить предложение
                             </motion.p>
                             <div className={`d-flex align-items-center justify-content-center`}>
                                 <Link href={`/auth/registration`}>
                                     <a className={`btn btn-primary`}>
-                                        ТехПроцесс
+                                        Регистрация
                                     </a>
                                 </Link>
-                                <Link href={`/auth/registration`}>
+                                <Link href={`/profile`}>
                                     <a className={`btn btn-primary mx-3`}>
-                                        Услуга
+                                         Войти в профиль
                                     </a>
                                 </Link>
-                                <Link href={`/auth/registration`}>
-                                    <a className={`btn btn-primary`}>
-                                        Продукция
-                                    </a>
-                                </Link>
+
                             </div>
                         </div>
 
