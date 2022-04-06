@@ -273,13 +273,26 @@ const Profile = () => {
                 },
             ]
         }
-    ])
+    ]);
+
+
+    const [isSideBar, setIsSideBar] = useState(false)
+    const [isMenuBar, setIsMenuBar] = useState(true)
 
     return (
         <>
             <div className={`container-fluid`}>
                 <div className={`profile`}>
-                    <div className={`profile-menu p-4`}>
+                    <div className={`profile-menu ${isMenuBar ? '' : 'hidden'} p-4`}>
+                        <button type={`button`} onClick={() => setIsMenuBar(!isMenuBar)} className={`profile-close`}>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.25 12.2744L19.25 12.2744" stroke="currentColor" strokeWidth="1.5"
+                                      strokeLinecap="round" strokeLinejoin="round"/>
+                                <path d="M10.2998 18.2988L4.2498 12.2748L10.2998 6.24976" stroke="currentColor"
+                                      strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
+                        </button>
                         <div className={`profile-menu-title mb-5`}>
                             <div className={`logo`}>
                                 <Link href={`/home`}>
@@ -293,35 +306,35 @@ const Profile = () => {
                             <ul>
                                 <li>
                                     <Link href={`/home`}>
-                                        <a className={`profile-menu-link`}>
+                                        <a className={`profile-menu-link profile-menu-hidden`}>
                                             Найти поставщика
                                         </a>
                                     </Link>
                                 </li>
                                 <li>
                                     <Link href={`/supplier`}>
-                                        <a className={`profile-menu-link`}>
+                                        <a className={`profile-menu-link profile-menu-hidden`}>
                                             Стать поставщиком
                                         </a>
                                     </Link>
                                 </li>
                                 <li>
                                     <Link href={`/contacts`}>
-                                        <a className={`profile-menu-link`}>
+                                        <a className={`profile-menu-link profile-menu-hidden`}>
                                             Банк контактов
                                         </a>
                                     </Link>
                                 </li>
                                 <li>
                                     <Link href={`/news`}>
-                                        <a className={`profile-menu-link`}>
+                                        <a className={`profile-menu-link profile-menu-hidden`}>
                                             Новости и мероприятия
                                         </a>
                                     </Link>
                                 </li>
                                 <li>
                                     <Link href={`/investments`}>
-                                        <a className={`profile-menu-link`}>
+                                        <a className={`profile-menu-link profile-menu-hidden`}>
                                             Инвестиционные предложения
                                         </a>
                                     </Link>
@@ -383,7 +396,7 @@ const Profile = () => {
                             </div>
                         </div>
                         <div className={`row`}>
-                            <div className={`col-3`}>
+                            <div className={`col-12 col-xl-3`}>
                                 <div className={`profile-filter`}>
                                     <div className="title">
                                         Фильтры отбора
@@ -404,7 +417,7 @@ const Profile = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className={`col`}>
+                            <div className={`col-12 col-xl-9`}>
                                 <div className={`profile-table`}>
                                     <div className={`d-flex align-items-center justify-content-between`}>
                                         <div className="title">
@@ -485,24 +498,33 @@ const Profile = () => {
                             </div>
                         </div>
                     </div>
-                    <div className={`profile-sidebar p-4`}>
-                        <div className={`profile-sidebar-title d-flex align-items-center justify-content-between mb-5`}>
+                    <div className={`profile-sidebar ${isSideBar ? '' : `hidden`} p-4`}>
+                        <button type={`button`} onClick={() => setIsSideBar(!isSideBar)} className={`profile-close`}>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.25 12.2744L19.25 12.2744" stroke="currentColor" strokeWidth="1.5"
+                                      strokeLinecap="round" strokeLinejoin="round"/>
+                                <path d="M10.2998 18.2988L4.2498 12.2748L10.2998 6.24976" stroke="currentColor"
+                                      strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
+                        </button>
+                        <div
+                            className={`profile-sidebar-title profile-sidebar-hidden d-flex align-items-center justify-content-between mb-5`}>
                             <h2>Личный профиль</h2>
-                            <button className={`btn btn-dark btn-sm rounded-pill`}>
-                                Редактировать
-                            </button>
                         </div>
-                        <div className={`profile-sidebar-content`}>
+                        <div className={`profile-sidebar-content `}>
                             <div className={`profile-sidebar-user d-flex align-items-center flex-column`}>
-                                <div className={`profile-sidebar-avatar mb-3`}>
+                                <div className={`profile-sidebar-avatar profile-sidebar-hidden mb-3`}>
                                     <img src="/logo.jpg" alt=""/>
                                 </div>
-                                <div className={`profile-sidebar-name`}>
+                                <div className={`profile-sidebar-name profile-sidebar-hidden`}>
                                     Брянский автомобильный завод
                                 </div>
                             </div>
-                            <div className={``}>
-
+                            <div className={`mt-4 d-flex justify-content-center profile-sidebar-hidden`}>
+                                <button className={`btn btn-dark btn-sm rounded-pill`}>
+                                    Редактировать
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -511,9 +533,6 @@ const Profile = () => {
         </>
     );
 };
-
-
-
 
 
 export default Profile;

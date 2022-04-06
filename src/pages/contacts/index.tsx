@@ -2,6 +2,98 @@ import React, {ReactElement} from 'react';
 import Layout from "../../layout";
 import {motion} from "framer-motion";
 import {fadeUp} from "../../motion";
+import ContactCard from "../../components/ContactCard";
+
+const state = [
+    {
+        id: 1,
+        title: 'Lorem ipsum dolor sit amet',
+        img: '/img.jpg',
+        address: 'Россия, г. Москва, ул. Тверская',
+        phone: '+ 7 (999) 99-99-999',
+        man: 'Иванов Иван Иванович'
+    },
+    {
+        id: 1,
+        title: 'Lorem ipsum dolor sit amet',
+        img: '/img.jpg',
+        address: 'Россия, г. Москва, ул. Тверская',
+        phone: '+ 7 (999) 99-99-999',
+        man: 'Иванов Иван Иванович'
+    },
+    {
+        id: 1,
+        title: 'Lorem ipsum dolor sit amet',
+        img: '/img.jpg',
+        address: 'Россия, г. Москва, ул. Тверская',
+        phone: '+ 7 (999) 99-99-999',
+        man: 'Иванов Иван Иванович'
+    },
+    {
+        id: 1,
+        title: 'Lorem ipsum dolor sit amet',
+        img: '/img.jpg',
+        address: 'Россия, г. Москва, ул. Тверская',
+        phone: '+ 7 (999) 99-99-999',
+        man: 'Иванов Иван Иванович'
+    },
+    {
+        id: 1,
+        title: 'Lorem ipsum dolor sit amet',
+        img: '/img.jpg',
+        address: 'Россия, г. Москва, ул. Тверская',
+        phone: '+ 7 (999) 99-99-999',
+        man: 'Иванов Иван Иванович'
+    },
+    {
+        id: 1,
+        title: 'Lorem ipsum dolor sit amet',
+        img: '/img.jpg',
+        address: 'Россия, г. Москва, ул. Тверская',
+        phone: '+ 7 (999) 99-99-999',
+        man: 'Иванов Иван Иванович'
+    },
+    {
+        id: 1,
+        title: 'Lorem ipsum dolor sit amet',
+        img: '/img.jpg',
+        address: 'Россия, г. Москва, ул. Тверская',
+        phone: '+ 7 (999) 99-99-999',
+        man: 'Иванов Иван Иванович'
+    },
+    {
+        id: 1,
+        title: 'Lorem ipsum dolor sit amet',
+        img: '/img.jpg',
+        address: 'Россия, г. Москва, ул. Тверская',
+        phone: '+ 7 (999) 99-99-999',
+        man: 'Иванов Иван Иванович'
+    },
+    {
+        id: 1,
+        title: 'Lorem ipsum dolor sit amet',
+        img: '/img.jpg',
+        address: 'Россия, г. Москва, ул. Тверская',
+        phone: '+ 7 (999) 99-99-999',
+        man: 'Иванов Иван Иванович'
+    },
+    {
+        id: 1,
+        title: 'Lorem ipsum dolor sit amet',
+        img: '/img.jpg',
+        address: 'Россия, г. Москва, ул. Тверская',
+        phone: '+ 7 (999) 99-99-999',
+        man: 'Иванов Иван Иванович'
+    },
+    {
+        id: 1,
+        title: 'Lorem ipsum dolor sit amet',
+        img: '/img.jpg',
+        address: 'Россия, г. Москва, ул. Тверская',
+        phone: '+ 7 (999) 99-99-999',
+        man: 'Иванов Иван Иванович'
+    }
+]
 
 const Contacts = () => {
     return (
@@ -20,6 +112,23 @@ const Contacts = () => {
 
 
                     </div>
+                </div>
+            </div>
+            <div className={`mt-5`}>
+                <div className={`row`}>
+                    {
+                        state.map((item, index) => (
+                            <motion.div
+                                variants={fadeUp}
+                                custom={index+5}
+                                initial={`initial`}
+                                viewport={{ once: true }}
+                                whileInView={`animate`}
+                                className={`col-6 mb-5`} key={index}>
+                                <ContactCard state={item}/>
+                            </motion.div>
+                        ))
+                    }
                 </div>
             </div>
         </div>
