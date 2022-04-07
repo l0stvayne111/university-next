@@ -75,7 +75,67 @@ const Home = () => {
                         </form>
                     </div>
                 </motion.div>
-                <div className={`filter my-5`}>
+                <div className={`filter-tabs mt-5`}>
+                    <div className={`container-xxl`}>
+                        <div className={`row align-items-center justify-content-center`}>
+                            <motion.div
+                                variants={fadeUp}
+                                custom={3}
+                                initial={`initial`}
+                                animate={`animate`}
+                                className="col-3"
+                            >
+                                <div
+                                    onClick={() => setIsFilter(1)}
+                                    className={`card ${isFilter === 1 && 'active'}`}>
+                                    <h2>
+                                        ТехПроцесс
+                                    </h2>
+                                    <p className={`mt-1`}>
+                                        Фильтрация
+                                    </p>
+                                </div>
+                            </motion.div>
+                            <motion.div
+                                variants={fadeUp}
+                                custom={5}
+                                initial={`initial`}
+                                animate={`animate`}
+                                className="col-3"
+                            >
+                                <div
+                                    onClick={() => setIsFilter(2)}
+                                    className={`card ${isFilter === 2 && 'active'}`}>
+                                    <h2>
+                                        Услуга
+                                    </h2>
+                                    <p className={`mt-1`}>
+                                        Фильтрация
+                                    </p>
+                                </div>
+                            </motion.div>
+                            <motion.div
+                                variants={fadeUp}
+                                custom={7}
+                                initial={`initial`}
+                                animate={`animate`}
+                                className="col-3"
+                            >
+                                <div
+                                    onClick={() => setIsFilter(3)}
+                                    className={`card ${isFilter === 3 && 'active'}`}>
+                                    <h2>
+                                        Продукция
+                                    </h2>
+                                    <p className={`mt-1`}>
+                                        Фильтрация
+                                    </p>
+                                </div>
+                            </motion.div>
+                        </div>
+                    </div>
+                </div>
+                <div className={`filter mt-5`}>
                     <div className={`container-small`}>
                         {
                             isFilter === 1 && (
@@ -212,67 +272,6 @@ const Home = () => {
                                 </div>
                             )
                         }
-                    </div>
-                </div>
-
-                <div className={`filter-tabs`}>
-                    <div className={`container-xxl`}>
-                        <div className={`row align-items-center justify-content-center`}>
-                            <motion.div
-                                variants={fadeUp}
-                                custom={3}
-                                initial={`initial`}
-                                animate={`animate`}
-                                className="col-3"
-                            >
-                                <div
-                                    onClick={() => setIsFilter(1)}
-                                    className={`card ${isFilter === 1 && 'active'}`}>
-                                    <h2>
-                                        ТехПроцесс
-                                    </h2>
-                                    <p className={`mt-1`}>
-                                        Фильтрация
-                                    </p>
-                                </div>
-                            </motion.div>
-                            <motion.div
-                                variants={fadeUp}
-                                custom={5}
-                                initial={`initial`}
-                                animate={`animate`}
-                                className="col-3"
-                            >
-                                <div
-                                    onClick={() => setIsFilter(2)}
-                                    className={`card ${isFilter === 2 && 'active'}`}>
-                                    <h2>
-                                        Услуга
-                                    </h2>
-                                    <p className={`mt-1`}>
-                                        Фильтрация
-                                    </p>
-                                </div>
-                            </motion.div>
-                            <motion.div
-                                variants={fadeUp}
-                                custom={7}
-                                initial={`initial`}
-                                animate={`animate`}
-                                className="col-3"
-                            >
-                                <div
-                                    onClick={() => setIsFilter(3)}
-                                    className={`card ${isFilter === 3 && 'active'}`}>
-                                    <h2>
-                                        Продукция
-                                    </h2>
-                                    <p className={`mt-1`}>
-                                        Фильтрация
-                                    </p>
-                                </div>
-                            </motion.div>
-                        </div>
                     </div>
                 </div>
             </div>

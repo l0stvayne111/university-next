@@ -19,9 +19,11 @@ const Layout: React.FC = ({children}) => {
                 <div className={`nav`}>
                     <div className={`container-fluid`}>
                         <div className={`d-flex align-items-center justify-content-between`}>
-                            <a href="#" className={`logo`}>
-                                <img src="/logo.jpg" alt=""/>
-                            </a>
+                            <Link href={`/home`}>
+                                <a className={`logo`}>
+                                    <img src="/logo.jpg" alt=""/>
+                                </a>
+                            </Link>
                             <ul className={`d-flex align-items-center`}>
                                 <li>
                                     <Link href={`/home`}>
@@ -31,11 +33,6 @@ const Layout: React.FC = ({children}) => {
                                 <li>
                                     <Link href={`/supplier`}>
                                         <a className={`nav-link`}>Стать поставщиком</a>
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href={`/profile`}>
-                                        <a className={`nav-link`}>Профиль</a>
                                     </Link>
                                 </li>
                                 <li>
@@ -57,6 +54,11 @@ const Layout: React.FC = ({children}) => {
                                         <a className={`nav-link`}>
                                             Инвестиционные предложения
                                         </a>
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href={`/profile`}>
+                                        <a className={`nav-link`}>Профиль</a>
                                     </Link>
                                 </li>
                             </ul>

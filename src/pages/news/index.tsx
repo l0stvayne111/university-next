@@ -8,69 +8,96 @@ const state: Array<Array<any>> = [
     [
         {
             id: 1,
-            img: 'https://i0.wp.com/tehpribory.ru/wp-content/uploads/2021/01/SHesterni-4.jpg?resize=400%2C358&ssl=1',
-            title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad alias aliquam autem culpa delectus, ea facere in itaque laudantium magnam molestiae mollitia necessitatibus nesciunt, placeat quae quaerat quo repellat reprehenderit saepe sapiente sed suscipit vel. Amet animi aperiam corporis, eius et harum illo in maxime nam, quam, ut voluptatibus!',
+            img: 'https://rostec.ru/upload/iblock/4ce/y24ctvpxqeayt81sql0jyetb2115e13u.jpg',
+            title: 'На московском предприятии ОДК модернизированы производственные мощности',
+            description: 'В производственном комплексе «Салют» Объединенной двигателестроительной корпорации сформирован новый современный высокотехнологичный участок по изготовлению зубчатых колес. Оборудование позволит значительно сократить трудоемкость и временные затраты, а также рационализировать производственный цикл изготовления деталей.',
             date: 'Oct 21, 2021',
         },
         {
             id: 2,
-            img: 'https://i0.wp.com/tehpribory.ru/wp-content/uploads/2021/01/SHesterni-4.jpg?resize=400%2C358&ssl=1',
-            title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad alias aliquam autem culpa delectus, ea facere in itaque laudantium magnam molestiae mollitia necessitatibus nesciunt, placeat quae quaerat quo repellat reprehenderit saepe sapiente sed suscipit vel. Amet animi aperiam corporis, eius et harum illo in maxime nam, quam, ut voluptatibus!',
+            img: 'https://www.metalinfo.ru/ru/news/133099.jpg',
+            title: 'Завод «Электрокабель» готов заместить выпуск 2 880 импортных изделий',
+            description: 'АО «Электрокабель» Кольчугинский завод» в 2021 году получило заключение о подтверждении производства 2880 типов продукции на территории России, сообщает пресс-центр Холдинга Кабельный Альянс.\n' +
+                'Для сотрудничества с государственными и муниципальными предприятиями продукция производителя должна быть включена в реестр Минпромторга РФ. Соответствующее заключение министерства и Торгово-промышленной палаты РФ получили 2880 наименований кабельно-проводниковой продукции АО «ЭКЗ».',
             date: 'Oct 21, 2021',
         },
         {
             id: 3,
-            img: 'https://i0.wp.com/tehpribory.ru/wp-content/uploads/2021/01/SHesterni-4.jpg?resize=400%2C358&ssl=1',
-            title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad alias aliquam autem culpa delectus, ea facere in itaque laudantium magnam molestiae mollitia necessitatibus nesciunt, placeat quae quaerat quo repellat reprehenderit saepe sapiente sed suscipit vel. Amet animi aperiam corporis, eius et harum illo in maxime nam, quam, ut voluptatibus!',
+            img: 'https://mplast.by/wp-content/uploads/2021/10/3dp-metallom-001.png',
+            title: 'Ковка, штамповка и 3D-печать как способ изготовления деталей из металла',
+            description: 'В 3D-печати металлом используются точные лазеры. 3D печать идеально подходит для экспериментов – изготовление деталей в небольших объемах. Из минусов, данный способ не так масштабируем, как многие другие процессы обработки металлов (например, литье, фрезеровка и др.). Поэтому его часто используют для изготовления прототипов, а также как заменитель мелкосерийного литья.',
             date: 'Oct 21, 2021',
         },
     ],
     [
         {
             id: 1,
-            img: 'https://i0.wp.com/tehpribory.ru/wp-content/uploads/2021/01/SHesterni-4.jpg?resize=400%2C358&ssl=1',
-            title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad alias aliquam autem culpa delectus, ea facere in itaque laudantium magnam molestiae mollitia necessitatibus nesciunt, placeat quae quaerat quo repellat reprehenderit saepe sapiente sed suscipit vel. Amet animi aperiam corporis, eius et harum illo in maxime nam, quam, ut voluptatibus!',
+            img: 'https://rostec.ru/upload/iblock/4ce/y24ctvpxqeayt81sql0jyetb2115e13u.jpg',
+            title: 'На московском предприятии ОДК модернизированы производственные мощности',
+            description: 'В производственном комплексе «Салют» Объединенной двигателестроительной корпорации сформирован новый современный высокотехнологичный участок по изготовлению зубчатых колес. Оборудование позволит значительно сократить трудоемкость и временные затраты, а также рационализировать производственный цикл изготовления деталей.',
             date: 'Oct 21, 2021',
         },
         {
             id: 2,
-            img: 'https://i0.wp.com/tehpribory.ru/wp-content/uploads/2021/01/SHesterni-4.jpg?resize=400%2C358&ssl=1',
-            title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad alias aliquam autem culpa delectus, ea facere in itaque laudantium magnam molestiae mollitia necessitatibus nesciunt, placeat quae quaerat quo repellat reprehenderit saepe sapiente sed suscipit vel. Amet animi aperiam corporis, eius et harum illo in maxime nam, quam, ut voluptatibus!',
+            img: 'https://www.metalinfo.ru/ru/news/133099.jpg',
+            title: 'Завод «Электрокабель» готов заместить выпуск 2 880 импортных изделий',
+            description: 'АО «Электрокабель» Кольчугинский завод» в 2021 году получило заключение о подтверждении производства 2880 типов продукции на территории России, сообщает пресс-центр Холдинга Кабельный Альянс.\n' +
+                'Для сотрудничества с государственными и муниципальными предприятиями продукция производителя должна быть включена в реестр Минпромторга РФ. Соответствующее заключение министерства и Торгово-промышленной палаты РФ получили 2880 наименований кабельно-проводниковой продукции АО «ЭКЗ».',
             date: 'Oct 21, 2021',
         },
         {
             id: 3,
-            img: 'https://i0.wp.com/tehpribory.ru/wp-content/uploads/2021/01/SHesterni-4.jpg?resize=400%2C358&ssl=1',
-            title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad alias aliquam autem culpa delectus, ea facere in itaque laudantium magnam molestiae mollitia necessitatibus nesciunt, placeat quae quaerat quo repellat reprehenderit saepe sapiente sed suscipit vel. Amet animi aperiam corporis, eius et harum illo in maxime nam, quam, ut voluptatibus!',
+            img: 'https://mplast.by/wp-content/uploads/2021/10/3dp-metallom-001.png',
+            title: 'Ковка, штамповка и 3D-печать как способ изготовления деталей из металла',
+            description: 'В 3D-печати металлом используются точные лазеры. 3D печать идеально подходит для экспериментов – изготовление деталей в небольших объемах. Из минусов, данный способ не так масштабируем, как многие другие процессы обработки металлов (например, литье, фрезеровка и др.). Поэтому его часто используют для изготовления прототипов, а также как заменитель мелкосерийного литья.',
             date: 'Oct 21, 2021',
         },
     ],
     [
         {
             id: 1,
-            img: 'https://i0.wp.com/tehpribory.ru/wp-content/uploads/2021/01/SHesterni-4.jpg?resize=400%2C358&ssl=1',
-            title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad alias aliquam autem culpa delectus, ea facere in itaque laudantium magnam molestiae mollitia necessitatibus nesciunt, placeat quae quaerat quo repellat reprehenderit saepe sapiente sed suscipit vel. Amet animi aperiam corporis, eius et harum illo in maxime nam, quam, ut voluptatibus!',
+            img: 'https://rostec.ru/upload/iblock/4ce/y24ctvpxqeayt81sql0jyetb2115e13u.jpg',
+            title: 'На московском предприятии ОДК модернизированы производственные мощности',
+            description: 'В производственном комплексе «Салют» Объединенной двигателестроительной корпорации сформирован новый современный высокотехнологичный участок по изготовлению зубчатых колес. Оборудование позволит значительно сократить трудоемкость и временные затраты, а также рационализировать производственный цикл изготовления деталей.',
             date: 'Oct 21, 2021',
         },
         {
             id: 2,
-            img: 'https://i0.wp.com/tehpribory.ru/wp-content/uploads/2021/01/SHesterni-4.jpg?resize=400%2C358&ssl=1',
-            title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad alias aliquam autem culpa delectus, ea facere in itaque laudantium magnam molestiae mollitia necessitatibus nesciunt, placeat quae quaerat quo repellat reprehenderit saepe sapiente sed suscipit vel. Amet animi aperiam corporis, eius et harum illo in maxime nam, quam, ut voluptatibus!',
+            img: 'https://www.metalinfo.ru/ru/news/133099.jpg',
+            title: 'Завод «Электрокабель» готов заместить выпуск 2 880 импортных изделий',
+            description: 'АО «Электрокабель» Кольчугинский завод» в 2021 году получило заключение о подтверждении производства 2880 типов продукции на территории России, сообщает пресс-центр Холдинга Кабельный Альянс.\n' +
+                'Для сотрудничества с государственными и муниципальными предприятиями продукция производителя должна быть включена в реестр Минпромторга РФ. Соответствующее заключение министерства и Торгово-промышленной палаты РФ получили 2880 наименований кабельно-проводниковой продукции АО «ЭКЗ».',
             date: 'Oct 21, 2021',
         },
         {
             id: 3,
-            img: 'https://i0.wp.com/tehpribory.ru/wp-content/uploads/2021/01/SHesterni-4.jpg?resize=400%2C358&ssl=1',
-            title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad alias aliquam autem culpa delectus, ea facere in itaque laudantium magnam molestiae mollitia necessitatibus nesciunt, placeat quae quaerat quo repellat reprehenderit saepe sapiente sed suscipit vel. Amet animi aperiam corporis, eius et harum illo in maxime nam, quam, ut voluptatibus!',
+            img: 'https://mplast.by/wp-content/uploads/2021/10/3dp-metallom-001.png',
+            title: 'Ковка, штамповка и 3D-печать как способ изготовления деталей из металла',
+            description: 'В 3D-печати металлом используются точные лазеры. 3D печать идеально подходит для экспериментов – изготовление деталей в небольших объемах. Из минусов, данный способ не так масштабируем, как многие другие процессы обработки металлов (например, литье, фрезеровка и др.). Поэтому его часто используют для изготовления прототипов, а также как заменитель мелкосерийного литья.',
+            date: 'Oct 21, 2021',
+        },
+    ],
+    [
+        {
+            id: 1,
+            img: 'https://rostec.ru/upload/iblock/4ce/y24ctvpxqeayt81sql0jyetb2115e13u.jpg',
+            title: 'На московском предприятии ОДК модернизированы производственные мощности',
+            description: 'В производственном комплексе «Салют» Объединенной двигателестроительной корпорации сформирован новый современный высокотехнологичный участок по изготовлению зубчатых колес. Оборудование позволит значительно сократить трудоемкость и временные затраты, а также рационализировать производственный цикл изготовления деталей.',
+            date: 'Oct 21, 2021',
+        },
+        {
+            id: 2,
+            img: 'https://www.metalinfo.ru/ru/news/133099.jpg',
+            title: 'Завод «Электрокабель» готов заместить выпуск 2 880 импортных изделий',
+            description: 'АО «Электрокабель» Кольчугинский завод» в 2021 году получило заключение о подтверждении производства 2880 типов продукции на территории России, сообщает пресс-центр Холдинга Кабельный Альянс.\n' +
+                'Для сотрудничества с государственными и муниципальными предприятиями продукция производителя должна быть включена в реестр Минпромторга РФ. Соответствующее заключение министерства и Торгово-промышленной палаты РФ получили 2880 наименований кабельно-проводниковой продукции АО «ЭКЗ».',
+            date: 'Oct 21, 2021',
+        },
+        {
+            id: 3,
+            img: 'https://mplast.by/wp-content/uploads/2021/10/3dp-metallom-001.png',
+            title: 'Ковка, штамповка и 3D-печать как способ изготовления деталей из металла',
+            description: 'В 3D-печати металлом используются точные лазеры. 3D печать идеально подходит для экспериментов – изготовление деталей в небольших объемах. Из минусов, данный способ не так масштабируем, как многие другие процессы обработки металлов (например, литье, фрезеровка и др.). Поэтому его часто используют для изготовления прототипов, а также как заменитель мелкосерийного литья.',
             date: 'Oct 21, 2021',
         },
     ],
@@ -95,7 +122,7 @@ const News = () => {
                     </div>
                 </div>
             </div>
-            <div className={`mt-5`}>
+            <div className={`mt-5 py-4`}>
                 {
                     state.map((item: Array<any>, index: number) => {
                         if (index % 2 === 0) {
@@ -154,7 +181,7 @@ const News = () => {
                                                         viewport={{ once: true }}
                                                         initial={`initial`}
                                                         whileInView={`animate`}>
-                                                        <NewsCard state={item[1]} type={`ROW`}/>
+                                                        <NewsCard state={item[0]} type={`ROW`}/>
                                                     </motion.div>
                                                 )
                                             }
@@ -166,7 +193,7 @@ const News = () => {
                                                         viewport={{ once: true }}
                                                         initial={`initial`}
                                                         whileInView={`animate`}>
-                                                        <NewsCard state={item[2]} type={`ROW`}/>
+                                                        <NewsCard state={item[1]} type={`ROW`}/>
                                                     </motion.div>
                                                 )
                                             }
