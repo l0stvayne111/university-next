@@ -86,7 +86,7 @@ const Investments = () => {
                             initial={`initial`}
                             animate={`animate`}
                         >
-                            ИИнвестиционные предложения
+                            Инвестиционные предложения
                         </motion.h1>
 
 
