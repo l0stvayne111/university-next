@@ -276,7 +276,7 @@ const Profile = () => {
     ]);
 
 
-    const [isSideBar, setIsSideBar] = useState(false)
+    const [isSideBar, setIsSideBar] = useState(true)
     const [isMenuBar, setIsMenuBar] = useState(true)
 
     return (

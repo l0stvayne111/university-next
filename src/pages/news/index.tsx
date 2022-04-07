@@ -8,21 +8,21 @@ const state: Array<Array<any>> = [
     [
         {
             id: 1,
-            img: '/img.jpg',
+            img: 'https://i0.wp.com/tehpribory.ru/wp-content/uploads/2021/01/SHesterni-4.jpg?resize=400%2C358&ssl=1',
             title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad alias aliquam autem culpa delectus, ea facere in itaque laudantium magnam molestiae mollitia necessitatibus nesciunt, placeat quae quaerat quo repellat reprehenderit saepe sapiente sed suscipit vel. Amet animi aperiam corporis, eius et harum illo in maxime nam, quam, ut voluptatibus!',
             date: 'Oct 21, 2021',
         },
         {
             id: 2,
-            img: '/img.jpg',
+            img: 'https://i0.wp.com/tehpribory.ru/wp-content/uploads/2021/01/SHesterni-4.jpg?resize=400%2C358&ssl=1',
             title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad alias aliquam autem culpa delectus, ea facere in itaque laudantium magnam molestiae mollitia necessitatibus nesciunt, placeat quae quaerat quo repellat reprehenderit saepe sapiente sed suscipit vel. Amet animi aperiam corporis, eius et harum illo in maxime nam, quam, ut voluptatibus!',
             date: 'Oct 21, 2021',
         },
         {
             id: 3,
-            img: '/img.jpg',
+            img: 'https://i0.wp.com/tehpribory.ru/wp-content/uploads/2021/01/SHesterni-4.jpg?resize=400%2C358&ssl=1',
             title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad alias aliquam autem culpa delectus, ea facere in itaque laudantium magnam molestiae mollitia necessitatibus nesciunt, placeat quae quaerat quo repellat reprehenderit saepe sapiente sed suscipit vel. Amet animi aperiam corporis, eius et harum illo in maxime nam, quam, ut voluptatibus!',
             date: 'Oct 21, 2021',
@@ -31,21 +31,21 @@ const state: Array<Array<any>> = [
     [
         {
             id: 1,
-            img: '/img.jpg',
+            img: 'https://i0.wp.com/tehpribory.ru/wp-content/uploads/2021/01/SHesterni-4.jpg?resize=400%2C358&ssl=1',
             title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad alias aliquam autem culpa delectus, ea facere in itaque laudantium magnam molestiae mollitia necessitatibus nesciunt, placeat quae quaerat quo repellat reprehenderit saepe sapiente sed suscipit vel. Amet animi aperiam corporis, eius et harum illo in maxime nam, quam, ut voluptatibus!',
             date: 'Oct 21, 2021',
         },
         {
             id: 2,
-            img: '/img.jpg',
+            img: 'https://i0.wp.com/tehpribory.ru/wp-content/uploads/2021/01/SHesterni-4.jpg?resize=400%2C358&ssl=1',
             title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad alias aliquam autem culpa delectus, ea facere in itaque laudantium magnam molestiae mollitia necessitatibus nesciunt, placeat quae quaerat quo repellat reprehenderit saepe sapiente sed suscipit vel. Amet animi aperiam corporis, eius et harum illo in maxime nam, quam, ut voluptatibus!',
             date: 'Oct 21, 2021',
         },
         {
             id: 3,
-            img: '/img.jpg',
+            img: 'https://i0.wp.com/tehpribory.ru/wp-content/uploads/2021/01/SHesterni-4.jpg?resize=400%2C358&ssl=1',
             title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad alias aliquam autem culpa delectus, ea facere in itaque laudantium magnam molestiae mollitia necessitatibus nesciunt, placeat quae quaerat quo repellat reprehenderit saepe sapiente sed suscipit vel. Amet animi aperiam corporis, eius et harum illo in maxime nam, quam, ut voluptatibus!',
             date: 'Oct 21, 2021',
@@ -54,21 +54,21 @@ const state: Array<Array<any>> = [
     [
         {
             id: 1,
-            img: '/img.jpg',
+            img: 'https://i0.wp.com/tehpribory.ru/wp-content/uploads/2021/01/SHesterni-4.jpg?resize=400%2C358&ssl=1',
             title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad alias aliquam autem culpa delectus, ea facere in itaque laudantium magnam molestiae mollitia necessitatibus nesciunt, placeat quae quaerat quo repellat reprehenderit saepe sapiente sed suscipit vel. Amet animi aperiam corporis, eius et harum illo in maxime nam, quam, ut voluptatibus!',
             date: 'Oct 21, 2021',
         },
         {
             id: 2,
-            img: '/img.jpg',
+            img: 'https://i0.wp.com/tehpribory.ru/wp-content/uploads/2021/01/SHesterni-4.jpg?resize=400%2C358&ssl=1',
             title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad alias aliquam autem culpa delectus, ea facere in itaque laudantium magnam molestiae mollitia necessitatibus nesciunt, placeat quae quaerat quo repellat reprehenderit saepe sapiente sed suscipit vel. Amet animi aperiam corporis, eius et harum illo in maxime nam, quam, ut voluptatibus!',
             date: 'Oct 21, 2021',
         },
         {
             id: 3,
-            img: '/img.jpg',
+            img: 'https://i0.wp.com/tehpribory.ru/wp-content/uploads/2021/01/SHesterni-4.jpg?resize=400%2C358&ssl=1',
             title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad alias aliquam autem culpa delectus, ea facere in itaque laudantium magnam molestiae mollitia necessitatibus nesciunt, placeat quae quaerat quo repellat reprehenderit saepe sapiente sed suscipit vel. Amet animi aperiam corporis, eius et harum illo in maxime nam, quam, ut voluptatibus!',
             date: 'Oct 21, 2021',
