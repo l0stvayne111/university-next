@@ -37,9 +37,12 @@ const Home = () => {
                                 initial={`initial`}
                                 animate={`animate`}
                             >
+                                <p>Кооперация 2.0</p> Сделано в России
+                                {/*
                                 Мы поможем вам найти партнеров
-                            </motion.h1>
-
+                                */}
+                            </motion.h1> <h1></h1>
+                        <br /><br /><br />
 
                         </div>
                     </div>
@@ -74,7 +77,7 @@ const Home = () => {
                             </div>
                         </form>
                     </div>
-                </motion.div>
+                </motion.div><br /><br />
                 <div className={`filter-tabs mt-5`}>
                     <div className={`container-xxl`}>
                         <div className={`row align-items-center justify-content-center`}>
@@ -89,7 +92,7 @@ const Home = () => {
                                     onClick={() => setIsFilter(1)}
                                     className={`card ${isFilter === 1 && 'active'}`}>
                                     <h2>
-                                        ТехПроцесс
+                                        Техроцесс
                                     </h2>
                                     <p className={`mt-1`}>
                                         Фильтрация

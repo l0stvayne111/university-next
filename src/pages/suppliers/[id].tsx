@@ -19,8 +19,8 @@ type ICard = {
 const store: Array<ICard> = [
     {
         id: 1,
-        title: `Зубчатая деталь из титана`,
-        image: 'https://i0.wp.com/tehpribory.ru/wp-content/uploads/2021/01/SHesterni-4.jpg?resize=400%2C358&ssl=1',
+        title: `Фрезерная обработка`,
+        image: 'https://st40.stpulscen.ru/images/product/210/928/278_big.jpg',
         description: `ООО «Пронская Металлобаза» — динамично развивающаяся и высокотехнологичная производственная компания, которая поставляет качественный металлопрокат.`,
         path: `/product/`,
         ul: [`Материал: титан`, `Размер: 36x36x36`, `Вес: 300г`],
@@ -69,7 +69,7 @@ const Suppliers = () => {
 
     const [filters, setFilters] = useState([
         {
-            name: 'ТехПроцесс',
+            name: 'Техпроцесс',
             items: [
                 {
                     name: 'Механическая обработка',

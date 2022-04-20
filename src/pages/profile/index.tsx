@@ -131,7 +131,7 @@ const Profile = () => {
     ])
     const [filters, setFilters] = useState([
         {
-            name: 'ТехПроцесс',
+            name: 'Техпроцесс',
             items: [
                 {
                     name: 'Механическая обработка',
@@ -357,7 +357,7 @@ const Profile = () => {
                                     animate={`animate`}
                                     className={`profile-main-card one`}>
                                     <div className={`title`}>
-                                        ТехПроцесс
+                                        Техпроцесс
                                     </div>
                                     <div className={`count`}>
                                         1532
@@ -515,11 +515,21 @@ const Profile = () => {
                         <div className={`profile-sidebar-content `}>
                             <div className={`profile-sidebar-user d-flex align-items-center flex-column`}>
                                 <div className={`profile-sidebar-avatar profile-sidebar-hidden mb-3`}>
-                                    <img src="/logo.jpg" alt=""/>
+                                    <img src="/ao-baz.png" alt=""/>
                                 </div>
                                 <div className={`profile-sidebar-name profile-sidebar-hidden`}>
                                     Брянский автомобильный завод
+
+
                                 </div>
+                                <br />
+                                    <p> г. Брянск, ул. Сталелитейная, д. 1 </p>
+
+                                <br />
+                                    <p> +7 (4832) 22-15-00 </p>
+
+                                <br />
+                                    <p> info@baz32.ru </p>
                             </div>
                             <div className={`mt-4 d-flex justify-content-center profile-sidebar-hidden`}>
                                 <button className={`btn btn-dark btn-sm rounded-pill`}>

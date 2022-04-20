@@ -23,7 +23,9 @@ const Layout: React.FC = ({children}) => {
                                 <a className={`logo`}>
                                     <img src="/logo.jpg" alt=""/>
                                 </a>
+
                             </Link>
+
                             <ul className={`d-flex align-items-center`}>
                                 <li>
                                     <Link href={`/home`}>
@@ -62,7 +64,8 @@ const Layout: React.FC = ({children}) => {
                                     </Link>
                                 </li>
                             </ul>
-                            <ul className={`d-flex align-items-center`}>
+
+                           <ul className={`d-flex align-items-center`}>
                                 <li>
                                     <div className={`dropdown`}>
                                         <div
@@ -99,6 +102,12 @@ const Layout: React.FC = ({children}) => {
                                     </button>
                                 </li>
                             </ul>
+                            <Link href={`/home`}>
+                                <a className={`logo`}>
+                                    <img src="/logo.jpg" alt=""/>
+                                </a>
+
+                            </Link>
                         </div>
                     </div>
                 </div>

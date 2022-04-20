@@ -17,8 +17,9 @@ const Supplier = () => {
                                 initial={`initial`}
                                 animate={`animate`}
                             >
-                                У вас есть производственные предложения?
-                            </motion.h1>
+                                Хотите добавить предложение?
+                                {/*У вас есть производственные предложения?*/}
+                            </motion.h1> <br />
                             <motion.p
                                 variants={fadeIn}
                                 custom={2}
