@@ -21,11 +21,16 @@ const Layout: React.FC = ({children}) => {
                         <div className={`d-flex align-items-center justify-content-between`}>
                             <Link href={`/home`}>
                                 <a className={`logo`}>
-                                    <img src="/logo.jpg" alt=""/>
+                                    <img src="/IT.jpg" alt=""/>
                                 </a>
 
                             </Link>
+                            <Link href={`/home`}>
+                                <a className={`logo`}>
+                                    <img src="/logo.jpg" alt=""/>
+                            </a>
 
+                            </Link>
                             <ul className={`d-flex align-items-center`}>
                                 <li>
                                     <Link href={`/home`}>
@@ -102,12 +107,6 @@ const Layout: React.FC = ({children}) => {
                                     </button>
                                 </li>
                             </ul>
-                            <Link href={`/home`}>
-                                <a className={`logo`}>
-                                    <img src="/logo.jpg" alt=""/>
-                                </a>
-
-                            </Link>
                         </div>
                     </div>
                 </div>
